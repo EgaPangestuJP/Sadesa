@@ -6,7 +6,7 @@ Version=11.8
 @EndOfDesignText@
 #Region  Activity Attributes 
 	#FullScreen: False
-	#IncludeTitle: False
+	#IncludeTitle: 	False
 #End Region
 
 Sub Process_Globals
@@ -23,7 +23,7 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
-	Activity.LoadLayout("LupaKataSandi")
+	Activity.LoadLayout("TambahArsipAdminDesa")
 
 End Sub
 
