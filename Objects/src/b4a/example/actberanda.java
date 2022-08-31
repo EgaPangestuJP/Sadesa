@@ -345,6 +345,7 @@ public static void initializeProcessGlobals() {
             }
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
+public anywheresoftware.b4a.objects.ListViewWrapper _lv = null;
 public b4a.example.main _main = null;
 public b4a.example.actopsi _actopsi = null;
 public b4a.example.actlogin _actlogin = null;
@@ -361,8 +362,52 @@ RDebugUtils.currentLine=1703936;
 RDebugUtils.currentLine=1703938;
  //BA.debugLineNum = 1703938;BA.debugLine="Activity.LoadLayout(\"berandaadmindesa\")";
 mostCurrent._activity.LoadLayout("berandaadmindesa",mostCurrent.activityBA);
+RDebugUtils.currentLine=1703939;
+ //BA.debugLineNum = 1703939;BA.debugLine="ShowList";
+_showlist();
 RDebugUtils.currentLine=1703940;
- //BA.debugLineNum = 1703940;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1703940;BA.debugLine="lv.SingleLineLayout.Label.TextColor = Colors.Blac";
+mostCurrent._lv.getSingleLineLayout().Label.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=1703941;
+ //BA.debugLineNum = 1703941;BA.debugLine="lv.SingleLineLayout.Label.TextSize = 15";
+mostCurrent._lv.getSingleLineLayout().Label.setTextSize((float) (15));
+RDebugUtils.currentLine=1703943;
+ //BA.debugLineNum = 1703943;BA.debugLine="End Sub";
+return "";
+}
+public static String  _showlist() throws Exception{
+RDebugUtils.currentModule="actberanda";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "showlist", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showlist", null));}
+int _i = 0;
+RDebugUtils.currentLine=3670016;
+ //BA.debugLineNum = 3670016;BA.debugLine="Sub ShowList";
+RDebugUtils.currentLine=3670017;
+ //BA.debugLineNum = 3670017;BA.debugLine="ModulKoneksi.koneksi";
+mostCurrent._modulkoneksi._koneksi /*String*/ (mostCurrent.activityBA);
+RDebugUtils.currentLine=3670018;
+ //BA.debugLineNum = 3670018;BA.debugLine="lv.Clear";
+mostCurrent._lv.Clear();
+RDebugUtils.currentLine=3670019;
+ //BA.debugLineNum = 3670019;BA.debugLine="ModulKoneksi.rs = ModulKoneksi.mh.Query(\"SELECT *";
+mostCurrent._modulkoneksi._rs /*mysql.mysqlhandler.ResultSetWrapper*/  = (mysql.mysqlhandler.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new mysql.mysqlhandler.ResultSetWrapper(), (java.sql.ResultSet)(mostCurrent._modulkoneksi._mh /*mysql.mysqlhandler*/ .Query("SELECT * FROM tb_desa ORDER BY id_desa ASC")));
+RDebugUtils.currentLine=3670020;
+ //BA.debugLineNum = 3670020;BA.debugLine="For i = 0 To ModulKoneksi.rs.RowCount - 1";
+{
+final int step4 = 1;
+final int limit4 = (int) (mostCurrent._modulkoneksi._rs /*mysql.mysqlhandler.ResultSetWrapper*/ .RowCount()-1);
+_i = (int) (0) ;
+for (;_i <= limit4 ;_i = _i + step4 ) {
+RDebugUtils.currentLine=3670021;
+ //BA.debugLineNum = 3670021;BA.debugLine="lv.AddSingleLine(ModulKoneksi.rs.GetString2(\"nam";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence(mostCurrent._modulkoneksi._rs /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("nama_desa")));
+ }
+};
+RDebugUtils.currentLine=3670023;
+ //BA.debugLineNum = 3670023;BA.debugLine="ModulKoneksi.mh.Close";
+mostCurrent._modulkoneksi._mh /*mysql.mysqlhandler*/ .Close();
+RDebugUtils.currentLine=3670024;
+ //BA.debugLineNum = 3670024;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{

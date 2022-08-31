@@ -55,6 +55,7 @@ public boolean isSingleton() {
 		return pcBA;
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
+public static RemoteObject _lv = RemoteObject.declareNull("anywheresoftware.b4a.objects.ListViewWrapper");
 public static b4a.example.main _main = null;
 public static b4a.example.actopsi _actopsi = null;
 public static b4a.example.actlogin _actlogin = null;
@@ -63,6 +64,6 @@ public static b4a.example.actregister _actregister = null;
 public static b4a.example.actlupakatasandi _actlupakatasandi = null;
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",actberanda.mostCurrent._activity,"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
+		return new Object[] {"Activity",actberanda.mostCurrent._activity,"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"lv",actberanda.mostCurrent._lv,"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
 }
 }
