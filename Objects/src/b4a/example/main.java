@@ -24,7 +24,7 @@ public class main extends Activity implements B4AActivity{
 	BA activityBA;
     ActivityWrapper _activity;
     java.util.ArrayList<B4AMenuItem> menuItems;
-	public static final boolean fullScreen = true;
+	public static final boolean fullScreen = false;
 	public static final boolean includeTitle = false;
     public static WeakReference<Activity> previousOne;
     public static boolean dontPause;
@@ -351,11 +351,11 @@ public static void initializeProcessGlobals() {
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
-vis = vis | (actregister.mostCurrent != null);
 vis = vis | (actopsi.mostCurrent != null);
-vis = vis | (actlupakatasandi.mostCurrent != null);
-vis = vis | (actberanda.mostCurrent != null);
 vis = vis | (actlogin.mostCurrent != null);
+vis = vis | (actberanda.mostCurrent != null);
+vis = vis | (actregister.mostCurrent != null);
+vis = vis | (actlupakatasandi.mostCurrent != null);
 return vis;}
 
 private static BA killProgramHelper(BA ba) {
@@ -381,18 +381,6 @@ public static void killProgram() {
 
  {
             Activity __a = null;
-            if (actregister.previousOne != null) {
-				__a = actregister.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(actregister.mostCurrent == null ? null : actregister.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
             if (actopsi.previousOne != null) {
 				__a = actopsi.previousOne.get();
 			}
@@ -405,11 +393,11 @@ public static void killProgram() {
 
  {
             Activity __a = null;
-            if (actlupakatasandi.previousOne != null) {
-				__a = actlupakatasandi.previousOne.get();
+            if (actlogin.previousOne != null) {
+				__a = actlogin.previousOne.get();
 			}
             else {
-                BA ba = killProgramHelper(actlupakatasandi.mostCurrent == null ? null : actlupakatasandi.mostCurrent.processBA);
+                BA ba = killProgramHelper(actlogin.mostCurrent == null ? null : actlogin.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -429,11 +417,23 @@ public static void killProgram() {
 
  {
             Activity __a = null;
-            if (actlogin.previousOne != null) {
-				__a = actlogin.previousOne.get();
+            if (actregister.previousOne != null) {
+				__a = actregister.previousOne.get();
 			}
             else {
-                BA ba = killProgramHelper(actlogin.mostCurrent == null ? null : actlogin.mostCurrent.processBA);
+                BA ba = killProgramHelper(actregister.mostCurrent == null ? null : actregister.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (actlupakatasandi.previousOne != null) {
+				__a = actlupakatasandi.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(actlupakatasandi.mostCurrent == null ? null : actlupakatasandi.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -443,13 +443,12 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _signin = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _btnkeluar = null;
-public b4a.example.actregister _actregister = null;
 public b4a.example.actopsi _actopsi = null;
-public b4a.example.actlupakatasandi _actlupakatasandi = null;
-public b4a.example.actberanda _actberanda = null;
 public b4a.example.actlogin _actlogin = null;
+public b4a.example.modulkoneksi _modulkoneksi = null;
+public b4a.example.actberanda _actberanda = null;
+public b4a.example.actregister _actregister = null;
+public b4a.example.actlupakatasandi _actlupakatasandi = null;
 public b4a.example.starter _starter = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
@@ -460,8 +459,8 @@ RDebugUtils.currentLine=131072;
 RDebugUtils.currentLine=131073;
  //BA.debugLineNum = 131073;BA.debugLine="Activity.LoadLayout(\"HomeScreen\")";
 mostCurrent._activity.LoadLayout("HomeScreen",mostCurrent.activityBA);
-RDebugUtils.currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="End Sub";
+RDebugUtils.currentLine=131075;
+ //BA.debugLineNum = 131075;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -482,43 +481,17 @@ RDebugUtils.currentLine=196610;
  //BA.debugLineNum = 196610;BA.debugLine="End Sub";
 return "";
 }
-public static String  _btnkeluar_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btnkeluar_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnkeluar_click", null));}
-RDebugUtils.currentLine=1703936;
- //BA.debugLineNum = 1703936;BA.debugLine="Private Sub BtnKeluar_Click";
-RDebugUtils.currentLine=1703937;
- //BA.debugLineNum = 1703937;BA.debugLine="StartActivity(actLogin)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actlogin.getObject()));
-RDebugUtils.currentLine=1703938;
- //BA.debugLineNum = 1703938;BA.debugLine="End Sub";
-return "";
-}
-public static String  _button1_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "button1_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "button1_click", null));}
-RDebugUtils.currentLine=1572864;
- //BA.debugLineNum = 1572864;BA.debugLine="Sub Button1_Click";
-RDebugUtils.currentLine=1572865;
- //BA.debugLineNum = 1572865;BA.debugLine="xui.MsgboxAsync(\"Hello world!\", \"B4X\")";
-_xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("Hello world!"),BA.ObjectToCharSequence("B4X"));
-RDebugUtils.currentLine=1572866;
- //BA.debugLineNum = 1572866;BA.debugLine="End Sub";
-return "";
-}
 public static String  _signin_click() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "signin_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "signin_click", null));}
-RDebugUtils.currentLine=1638400;
- //BA.debugLineNum = 1638400;BA.debugLine="Private Sub SignIn_Click";
-RDebugUtils.currentLine=1638401;
- //BA.debugLineNum = 1638401;BA.debugLine="StartActivity(actOpsi)";
+RDebugUtils.currentLine=327680;
+ //BA.debugLineNum = 327680;BA.debugLine="Private Sub SignIn_Click";
+RDebugUtils.currentLine=327682;
+ //BA.debugLineNum = 327682;BA.debugLine="StartActivity(actOpsi)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actopsi.getObject()));
-RDebugUtils.currentLine=1638402;
- //BA.debugLineNum = 1638402;BA.debugLine="End Sub";
+RDebugUtils.currentLine=327683;
+ //BA.debugLineNum = 327683;BA.debugLine="End Sub";
 return "";
 }
 }

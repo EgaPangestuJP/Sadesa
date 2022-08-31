@@ -127,11 +127,12 @@ public class starter extends  android.app.Service{
 	}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public b4a.example.main _main = null;
-public b4a.example.actregister _actregister = null;
 public b4a.example.actopsi _actopsi = null;
-public b4a.example.actlupakatasandi _actlupakatasandi = null;
-public b4a.example.actberanda _actberanda = null;
 public b4a.example.actlogin _actlogin = null;
+public b4a.example.modulkoneksi _modulkoneksi = null;
+public b4a.example.actberanda _actberanda = null;
+public b4a.example.actregister _actregister = null;
+public b4a.example.actlupakatasandi _actlupakatasandi = null;
 public static boolean  _application_error(anywheresoftware.b4a.objects.B4AException _error,String _stacktrace) throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "application_error", false))

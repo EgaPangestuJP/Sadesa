@@ -2,9 +2,9 @@ b4a.example
 0
 0
 0
-main,activity_create,1,0,27,29
-,signin
-,signin
+main,activity_create,1,0,26,29
+
+
 
 main,activity_pause,0,0,35,37
 
@@ -14,15 +14,7 @@ main,activity_resume,0,0,31,33
 
 
 
-main,btnkeluar_click,0,0,47,49
-
-
-
-main,button1_click,0,0,39,41
-,xui
-
-
-main,globals,0,1,21,25
+main,globals,0,1,21,24
 
 
 
@@ -30,59 +22,27 @@ main,process_globals,0,1,15,19
 
 
 
-main,signin_click,0,0,43,45
+main,signin_click,0,0,39,42
 
 
 
-actregister,activity_create,1,0,19,23
-,btnlogin
-,btnlogin
+actopsi,activity_create,1,0,20,24
+,admindesa,,warga
+,admindesa,,warga
 
-actregister,activity_pause,0,0,29,31
-
-
-
-actregister,activity_resume,0,0,25,27
+actopsi,activity_pause,0,0,30,32
 
 
 
-actregister,btnlogin_click,0,0,34,36
+actopsi,activity_resume,0,0,26,28
 
 
 
-actregister,globals,0,1,12,17
+actopsi,admindesa_click,0,0,35,38
 
 
 
-actregister,process_globals,0,1,6,10
-
-
-
-actopsi,activity_create,1,0,21,25
-,button1,,button2,,button3
-,button1,,button2,,button3
-
-actopsi,activity_pause,0,0,31,33
-
-
-
-actopsi,activity_resume,0,0,27,29
-
-
-
-actopsi,button1_click,0,0,44,46
-
-
-
-actopsi,button2_click,0,0,40,42
-
-
-
-actopsi,button3_click,0,0,36,38
-
-
-
-actopsi,globals,0,1,12,19
+actopsi,globals,0,1,12,18
 
 
 
@@ -90,43 +50,67 @@ actopsi,process_globals,0,1,6,10
 
 
 
-actlupakatasandi,activity_create,1,0,18,22
+actopsi,warga_click,0,0,40,42
 
 
 
-actlupakatasandi,activity_pause,0,0,28,30
+actlogin,activity_create,1,0,27,30
+,txtnama,,txtpass
+,txtnama,,txtpass
+
+actlogin,activity_pause,0,0,36,38
 
 
 
-actlupakatasandi,activity_resume,0,0,24,26
+actlogin,activity_resume,0,0,32,34
 
 
 
-actlupakatasandi,globals,0,1,12,16
+actlogin,btnlogin_click,0,0,50,87
 
 
 
-actlupakatasandi,process_globals,0,1,6,10
+actlogin,btnregis_click,0,0,41,44
 
 
 
-actberanda,activity_create,1,0,19,23
+actlogin,btnresetsandi_click,0,0,46,49
 
 
 
-actberanda,activity_pause,0,0,29,31
+actlogin,enkripsi,0,0,89,92
+,passwordhash,,md,,p,,epass,,bytecon
+,passwordhash,,epass
+
+actlogin,globals,0,1,12,25
 
 
 
-actberanda,activity_resume,0,0,25,27
+actlogin,process_globals,0,1,6,10
 
 
 
-actberanda,btnkeluar_click,0,0,34,36
+modulkoneksi,koneksi,0,0,12,24
+,mhandler
+
+
+modulkoneksi,process_globals,0,1,3,10
 
 
 
-actberanda,globals,0,1,12,17
+actberanda,activity_create,1,0,17,21
+
+
+
+actberanda,activity_pause,0,0,27,29
+
+
+
+actberanda,activity_resume,0,0,23,25
+
+
+
+actberanda,globals,0,1,12,15
 
 
 
@@ -134,39 +118,51 @@ actberanda,process_globals,0,1,6,10
 
 
 
-actlogin,activity_create,1,0,22,26
-,btnlogin,,btnlupakatasandi,,btnregis
-,btnlogin,,btnlupakatasandi,,btnregis
-
-actlogin,activity_pause,0,0,32,34
+actregister,activity_create,1,0,17,21
 
 
 
-actlogin,activity_resume,0,0,28,30
+actregister,activity_pause,0,0,27,29
 
 
 
-actlogin,btnkembali_click,0,0,45,47
+actregister,activity_resume,0,0,23,25
 
 
 
-actlogin,btnlogin_click,0,0,49,51
+actregister,btnlogin_click,0,0,32,35
 
 
 
-actlogin,btnlupakatasandi_click,0,0,41,43
+actregister,globals,0,1,12,15
 
 
 
-actlogin,btnregis_click,0,0,37,39
+actregister,process_globals,0,1,6,10
 
 
 
-actlogin,globals,0,1,12,20
+actlupakatasandi,activity_create,1,0,19,23
+,btnhubadmin
+,btnhubadmin
+
+actlupakatasandi,activity_pause,0,0,29,31
 
 
 
-actlogin,process_globals,0,1,6,10
+actlupakatasandi,activity_resume,0,0,25,27
+
+
+
+actlupakatasandi,btnhubadmin_click,0,0,33,35
+
+
+
+actlupakatasandi,globals,0,1,12,17
+
+
+
+actlupakatasandi,process_globals,0,1,6,10
 
 
 

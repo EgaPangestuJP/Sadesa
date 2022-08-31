@@ -1,11 +1,11 @@
 ﻿B4A=true
-Group=Default Group
+Group=Modul Group
 ModulesStructureVersion=1
 Type=Activity
 Version=11.8
 @EndOfDesignText@
 #Region  Activity Attributes 
-	#FullScreen: True
+	#FullScreen: False
 	#IncludeTitle: False
 #End Region
 
@@ -18,8 +18,6 @@ End Sub
 Sub Globals
 	'These global variables will be redeclared each time the activity is created.
 	'These variables can only be accessed from this module.
-
-	Private btnLogin As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -38,6 +36,6 @@ End Sub
 
 
 Private Sub btnLogin_Click
-	Activity.Finish
+	'Activity.Finish
 	StartActivity(actLogin)
 End Sub

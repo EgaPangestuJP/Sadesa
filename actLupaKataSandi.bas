@@ -1,5 +1,5 @@
 ﻿B4A=true
-Group=Default Group
+Group=Modul Group
 ModulesStructureVersion=1
 Type=Activity
 Version=11.8
@@ -19,6 +19,7 @@ Sub Globals
 	'These global variables will be redeclared each time the activity is created.
 	'These variables can only be accessed from this module.
 
+	Private BtnHubAdmin As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -33,4 +34,8 @@ End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 
+End Sub
+
+Private Sub BtnHubAdmin_Click
+	
 End Sub

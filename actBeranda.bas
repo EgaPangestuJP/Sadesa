@@ -1,11 +1,11 @@
 ﻿B4A=true
-Group=Default Group
+Group=Modul Group
 ModulesStructureVersion=1
 Type=Activity
 Version=11.8
 @EndOfDesignText@
 #Region  Activity Attributes 
-	#FullScreen: True
+	#FullScreen: False
 	#IncludeTitle: False
 #End Region
 
@@ -18,13 +18,11 @@ End Sub
 Sub Globals
 	'These global variables will be redeclared each time the activity is created.
 	'These variables can only be accessed from this module.
-
-	Private BtnKeluar As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
-	Activity.LoadLayout("Beranda")
+	Activity.LoadLayout("berandaadmindesa")
 
 End Sub
 
@@ -34,9 +32,4 @@ End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 
-End Sub
-
-
-Private Sub BtnKeluar_Click
-	StartActivity(actLogin)
 End Sub

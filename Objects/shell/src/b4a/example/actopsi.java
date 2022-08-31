@@ -55,16 +55,16 @@ public boolean isSingleton() {
 		return pcBA;
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
-public static RemoteObject _button1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
-public static RemoteObject _button2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
-public static RemoteObject _button3 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _admindesa = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _warga = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static b4a.example.main _main = null;
+public static b4a.example.actlogin _actlogin = null;
+public static b4a.example.modulkoneksi _modulkoneksi = null;
+public static b4a.example.actberanda _actberanda = null;
 public static b4a.example.actregister _actregister = null;
 public static b4a.example.actlupakatasandi _actlupakatasandi = null;
-public static b4a.example.actberanda _actberanda = null;
-public static b4a.example.actlogin _actlogin = null;
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"Activity",actopsi.mostCurrent._activity,"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"Button1",actopsi.mostCurrent._button1,"Button2",actopsi.mostCurrent._button2,"Button3",actopsi.mostCurrent._button3,"Main",Debug.moduleToString(b4a.example.main.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
+		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"Activity",actopsi.mostCurrent._activity,"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"AdminDesa",actopsi.mostCurrent._admindesa,"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"Warga",actopsi.mostCurrent._warga};
 }
 }

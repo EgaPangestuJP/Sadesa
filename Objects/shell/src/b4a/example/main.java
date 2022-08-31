@@ -56,15 +56,14 @@ public boolean isSingleton() {
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.XUI");
-public static RemoteObject _signin = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
-public static RemoteObject _btnkeluar = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
-public static b4a.example.actregister _actregister = null;
 public static b4a.example.actopsi _actopsi = null;
-public static b4a.example.actlupakatasandi _actlupakatasandi = null;
-public static b4a.example.actberanda _actberanda = null;
 public static b4a.example.actlogin _actlogin = null;
+public static b4a.example.modulkoneksi _modulkoneksi = null;
+public static b4a.example.actberanda _actberanda = null;
+public static b4a.example.actregister _actregister = null;
+public static b4a.example.actlupakatasandi _actlupakatasandi = null;
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"Activity",main.mostCurrent._activity,"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"BtnKeluar",main.mostCurrent._btnkeluar,"SignIn",main.mostCurrent._signin,"Starter",Debug.moduleToString(b4a.example.starter.class),"xui",main._xui};
+		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"Activity",main.mostCurrent._activity,"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"xui",main._xui};
 }
 }

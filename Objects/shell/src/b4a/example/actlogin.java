@@ -55,17 +55,21 @@ public boolean isSingleton() {
 		return pcBA;
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
-public static RemoteObject _btnlupakatasandi = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
-public static RemoteObject _btnregis = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
-public static RemoteObject _btnkembali = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
-public static RemoteObject _btnlogin = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _txtnama = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
+public static RemoteObject _txtpass = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
+public static RemoteObject _md = RemoteObject.declareNull("anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper");
+public static RemoteObject _bytecon = RemoteObject.declareNull("anywheresoftware.b4a.agraham.byteconverter.ByteConverter");
+public static RemoteObject _passwordhash = null;
+public static RemoteObject _epass = RemoteObject.createImmutable("");
+public static RemoteObject _p = RemoteObject.createImmutable("");
 public static b4a.example.main _main = null;
-public static b4a.example.actregister _actregister = null;
 public static b4a.example.actopsi _actopsi = null;
-public static b4a.example.actlupakatasandi _actlupakatasandi = null;
+public static b4a.example.modulkoneksi _modulkoneksi = null;
 public static b4a.example.actberanda _actberanda = null;
+public static b4a.example.actregister _actregister = null;
+public static b4a.example.actlupakatasandi _actlupakatasandi = null;
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"Activity",actlogin.mostCurrent._activity,"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"BtnKembali",actlogin.mostCurrent._btnkembali,"BtnLogin",actlogin.mostCurrent._btnlogin,"btnLupaKataSandi",actlogin.mostCurrent._btnlupakatasandi,"btnRegis",actlogin.mostCurrent._btnregis,"Main",Debug.moduleToString(b4a.example.main.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
+		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"Activity",actlogin.mostCurrent._activity,"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"ByteCon",actlogin.mostCurrent._bytecon,"epass",actlogin.mostCurrent._epass,"Main",Debug.moduleToString(b4a.example.main.class),"md",actlogin.mostCurrent._md,"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"p",actlogin.mostCurrent._p,"passwordhash",actlogin._passwordhash,"Starter",Debug.moduleToString(b4a.example.starter.class),"txtnama",actlogin.mostCurrent._txtnama,"txtpass",actlogin.mostCurrent._txtpass};
 }
 }

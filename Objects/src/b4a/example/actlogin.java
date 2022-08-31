@@ -24,7 +24,7 @@ public class actlogin extends Activity implements B4AActivity{
 	BA activityBA;
     ActivityWrapper _activity;
     java.util.ArrayList<B4AMenuItem> menuItems;
-	public static final boolean fullScreen = true;
+	public static final boolean fullScreen = false;
 	public static final boolean includeTitle = false;
     public static WeakReference<Activity> previousOne;
     public static boolean dontPause;
@@ -345,97 +345,104 @@ public static void initializeProcessGlobals() {
             }
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _btnlupakatasandi = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _btnregis = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _btnkembali = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _btnlogin = null;
+public anywheresoftware.b4a.objects.EditTextWrapper _txtnama = null;
+public anywheresoftware.b4a.objects.EditTextWrapper _txtpass = null;
+public anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper _md = null;
+public anywheresoftware.b4a.agraham.byteconverter.ByteConverter _bytecon = null;
+public static byte[] _passwordhash = null;
+public static String _epass = "";
+public static String _p = "";
 public b4a.example.main _main = null;
-public b4a.example.actregister _actregister = null;
 public b4a.example.actopsi _actopsi = null;
-public b4a.example.actlupakatasandi _actlupakatasandi = null;
+public b4a.example.modulkoneksi _modulkoneksi = null;
 public b4a.example.actberanda _actberanda = null;
+public b4a.example.actregister _actregister = null;
+public b4a.example.actlupakatasandi _actlupakatasandi = null;
 public b4a.example.starter _starter = null;
-public static String  _activity_create(boolean _firsttime) throws Exception{
+public static String  _activity_create(boolean _firesultsttime) throws Exception{
 RDebugUtils.currentModule="actlogin";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=2293760;
- //BA.debugLineNum = 2293760;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=2293762;
- //BA.debugLineNum = 2293762;BA.debugLine="Activity.LoadLayout(\"Login\")";
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firesultsttime}));}
+RDebugUtils.currentLine=983040;
+ //BA.debugLineNum = 983040;BA.debugLine="Sub Activity_Create(FiResultStTime As Boolean)";
+RDebugUtils.currentLine=983042;
+ //BA.debugLineNum = 983042;BA.debugLine="Activity.LoadLayout(\"Login\")";
 mostCurrent._activity.LoadLayout("Login",mostCurrent.activityBA);
-RDebugUtils.currentLine=2293764;
- //BA.debugLineNum = 2293764;BA.debugLine="End Sub";
+RDebugUtils.currentLine=983043;
+ //BA.debugLineNum = 983043;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="actlogin";
-RDebugUtils.currentLine=2424832;
- //BA.debugLineNum = 2424832;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=2424834;
- //BA.debugLineNum = 2424834;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1114112;
+ //BA.debugLineNum = 1114112;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=1114114;
+ //BA.debugLineNum = 1114114;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="actlogin";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=2359296;
- //BA.debugLineNum = 2359296;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=2359298;
- //BA.debugLineNum = 2359298;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btnkembali_click() throws Exception{
-RDebugUtils.currentModule="actlogin";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btnkembali_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnkembali_click", null));}
-RDebugUtils.currentLine=2621440;
- //BA.debugLineNum = 2621440;BA.debugLine="Private Sub BtnKembali_Click";
-RDebugUtils.currentLine=2621441;
- //BA.debugLineNum = 2621441;BA.debugLine="StartActivity(actOpsi)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actopsi.getObject()));
-RDebugUtils.currentLine=2621442;
- //BA.debugLineNum = 2621442;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1048576;
+ //BA.debugLineNum = 1048576;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=1048578;
+ //BA.debugLineNum = 1048578;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnlogin_click() throws Exception{
 RDebugUtils.currentModule="actlogin";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "btnlogin_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnlogin_click", null));}
-RDebugUtils.currentLine=2686976;
- //BA.debugLineNum = 2686976;BA.debugLine="Private Sub BtnLogin_Click";
-RDebugUtils.currentLine=2686977;
- //BA.debugLineNum = 2686977;BA.debugLine="StartActivity(actBeranda)";
+RDebugUtils.currentLine=1179648;
+ //BA.debugLineNum = 1179648;BA.debugLine="Private Sub BtnLogin_Click";
+RDebugUtils.currentLine=1179674;
+ //BA.debugLineNum = 1179674;BA.debugLine="StartActivity(actBeranda)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actberanda.getObject()));
-RDebugUtils.currentLine=2686978;
- //BA.debugLineNum = 2686978;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btnlupakatasandi_click() throws Exception{
-RDebugUtils.currentModule="actlogin";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btnlupakatasandi_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnlupakatasandi_click", null));}
-RDebugUtils.currentLine=2555904;
- //BA.debugLineNum = 2555904;BA.debugLine="Private Sub btnLupaKataSandi_Click";
-RDebugUtils.currentLine=2555905;
- //BA.debugLineNum = 2555905;BA.debugLine="StartActivity(actLupaKataSandi)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actlupakatasandi.getObject()));
-RDebugUtils.currentLine=2555906;
- //BA.debugLineNum = 2555906;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1179685;
+ //BA.debugLineNum = 1179685;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnregis_click() throws Exception{
 RDebugUtils.currentModule="actlogin";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "btnregis_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnregis_click", null));}
-RDebugUtils.currentLine=2490368;
- //BA.debugLineNum = 2490368;BA.debugLine="Private Sub btnRegis_Click";
-RDebugUtils.currentLine=2490369;
- //BA.debugLineNum = 2490369;BA.debugLine="StartActivity(actRegister)";
+RDebugUtils.currentLine=1310720;
+ //BA.debugLineNum = 1310720;BA.debugLine="Sub btnRegis_Click";
+RDebugUtils.currentLine=1310722;
+ //BA.debugLineNum = 1310722;BA.debugLine="StartActivity(actRegister)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actregister.getObject()));
-RDebugUtils.currentLine=2490370;
- //BA.debugLineNum = 2490370;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1310723;
+ //BA.debugLineNum = 1310723;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btnresetsandi_click() throws Exception{
+RDebugUtils.currentModule="actlogin";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "btnresetsandi_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnresetsandi_click", null));}
+RDebugUtils.currentLine=1376256;
+ //BA.debugLineNum = 1376256;BA.debugLine="Sub BtnResetSandi_Click";
+RDebugUtils.currentLine=1376258;
+ //BA.debugLineNum = 1376258;BA.debugLine="StartActivity(actLupaKataSandi)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actlupakatasandi.getObject()));
+RDebugUtils.currentLine=1376259;
+ //BA.debugLineNum = 1376259;BA.debugLine="End Sub";
+return "";
+}
+public static String  _enkripsi() throws Exception{
+RDebugUtils.currentModule="actlogin";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "enkripsi", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "enkripsi", null));}
+RDebugUtils.currentLine=1245184;
+ //BA.debugLineNum = 1245184;BA.debugLine="Sub enkripsi";
+RDebugUtils.currentLine=1245185;
+ //BA.debugLineNum = 1245185;BA.debugLine="passwordhash = md.GetMessageDigest(p.GetBytes(\"UT";
+_passwordhash = mostCurrent._md.GetMessageDigest(mostCurrent._p.getBytes("UTF8"),"MD5");
+RDebugUtils.currentLine=1245186;
+ //BA.debugLineNum = 1245186;BA.debugLine="epass = ByteCon.HexFromBytes(passwordhash)";
+mostCurrent._epass = mostCurrent._bytecon.HexFromBytes(_passwordhash);
+RDebugUtils.currentLine=1245187;
+ //BA.debugLineNum = 1245187;BA.debugLine="End Sub";
 return "";
 }
 }
