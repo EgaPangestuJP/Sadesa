@@ -353,6 +353,7 @@ public b4a.example.modulkoneksi _modulkoneksi = null;
 public b4a.example.actberanda _actberanda = null;
 public b4a.example.actregister _actregister = null;
 public b4a.example.starter _starter = null;
+public b4a.example.akunpenduduk _akunpenduduk = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="actlupakatasandi";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))

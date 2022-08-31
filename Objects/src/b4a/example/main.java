@@ -356,6 +356,7 @@ vis = vis | (actlogin.mostCurrent != null);
 vis = vis | (actberanda.mostCurrent != null);
 vis = vis | (actregister.mostCurrent != null);
 vis = vis | (actlupakatasandi.mostCurrent != null);
+vis = vis | (akunpenduduk.mostCurrent != null);
 return vis;}
 
 private static BA killProgramHelper(BA ba) {
@@ -440,6 +441,18 @@ public static void killProgram() {
 				__a.finish();}
 
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
+ {
+            Activity __a = null;
+            if (akunpenduduk.previousOne != null) {
+				__a = akunpenduduk.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(akunpenduduk.mostCurrent == null ? null : akunpenduduk.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
@@ -450,6 +463,7 @@ public b4a.example.actberanda _actberanda = null;
 public b4a.example.actregister _actregister = null;
 public b4a.example.actlupakatasandi _actlupakatasandi = null;
 public b4a.example.starter _starter = null;
+public b4a.example.akunpenduduk _akunpenduduk = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))

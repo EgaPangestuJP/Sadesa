@@ -58,7 +58,8 @@ public static b4a.example.modulkoneksi _modulkoneksi = null;
 public static b4a.example.actberanda _actberanda = null;
 public static b4a.example.actregister _actregister = null;
 public static b4a.example.actlupakatasandi _actlupakatasandi = null;
+public static b4a.example.akunpenduduk _akunpenduduk = null;
   public Object[] GetGlobals() {
-		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Service",starter.mostCurrent._service};
+		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"AkunPenduduk",Debug.moduleToString(b4a.example.akunpenduduk.class),"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Service",starter.mostCurrent._service};
 }
 }

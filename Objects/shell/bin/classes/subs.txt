@@ -2,19 +2,19 @@ b4a.example
 0
 0
 0
-main,activity_create,1,0,26,29
+main,activity_create,1,0,27,30
 
 
 
-main,activity_pause,0,0,35,37
+main,activity_pause,0,0,36,38
 
 
 
-main,activity_resume,0,0,31,33
+main,activity_resume,0,0,32,34
 
 
 
-main,globals,0,1,21,24
+main,globals,0,1,21,25
 
 
 
@@ -22,7 +22,7 @@ main,process_globals,0,1,15,19
 
 
 
-main,signin_click,0,0,39,42
+main,signin_click,0,0,40,43
 
 
 
@@ -66,9 +66,13 @@ actlogin,activity_resume,0,0,32,34
 
 
 
-actlogin,btnlogin_click,0,0,50,52
-
-
+actlogin,btnlogin_click,1,0,51,89
+,txtnama,,txtpass,,p,modulkoneksi,rs,modulkoneksi,mh,,epass,,passwordhash,,md,,bytecon
+,p,modulkoneksi,rs,,passwordhash,,epass
+modulkoneksi,koneksi,,enkripsi
+actlogin,enkripsi,0,0,91,94
+,passwordhash,,md,,p,,epass,,bytecon
+,passwordhash,,epass
 
 actlogin,btnregis_click,0,0,41,44
 
@@ -78,10 +82,6 @@ actlogin,btnresetsandi_click,0,0,46,49
 
 
 
-actlogin,enkripsi,0,0,54,57
-,passwordhash,,mhandler,,p,,epass,,bytecon
-,passwordhash,,epass
-
 actlogin,globals,0,1,12,25
 
 
@@ -90,11 +90,11 @@ actlogin,process_globals,0,1,6,10
 
 
 
-modulkoneksi,koneksi,0,0,12,24
-,mhandler
+modulkoneksi,koneksi,0,0,11,20
+,mh
 
 
-modulkoneksi,process_globals,0,1,3,10
+modulkoneksi,process_globals,0,1,3,9
 
 
 
@@ -107,6 +107,10 @@ actberanda,activity_pause,0,0,27,29
 
 
 actberanda,activity_resume,0,0,23,25
+
+
+
+actberanda,btnakunwarga_click,0,1,31,34
 
 
 
@@ -190,3 +194,43 @@ starter,service_taskremoved,0,0,22,24
 
 
 
+akunpenduduk,activity_create,1,0,21,29
+,btnadd,,lv,,search,modulkoneksi,rs,modulkoneksi,mh
+,btnadd,,lv,,search,modulkoneksi,rs
+,showlist,modulkoneksi,koneksi
+akunpenduduk,showlist,0,0,53,64
+,lv,modulkoneksi,rs,modulkoneksi,mh
+modulkoneksi,rs
+modulkoneksi,koneksi
+akunpenduduk,activity_pause,0,0,35,37
+
+
+
+akunpenduduk,activity_resume,0,0,31,33
+
+
+
+akunpenduduk,btnadd_click,0,0,48,51
+
+
+
+akunpenduduk,filterlist,0,0,66,77
+,lv,modulkoneksi,rs,modulkoneksi,mh,,search
+modulkoneksi,rs
+modulkoneksi,koneksi
+akunpenduduk,globals,0,1,12,19
+
+
+
+akunpenduduk,lv_itemclick,0,0,40,42
+
+
+
+akunpenduduk,process_globals,0,1,6,10
+
+
+
+akunpenduduk,search_enterpressed,0,0,44,46
+,lv,modulkoneksi,rs,modulkoneksi,mh,,search
+modulkoneksi,rs
+,filterlist,modulkoneksi,koneksi
