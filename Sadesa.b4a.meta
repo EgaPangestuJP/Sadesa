@@ -22,6 +22,6 @@ ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=1
-NavigationStack=actOpsi,Warga_Click,41,0,Main,SignIn_Click,39,0,actRegister,btnLogin_Click,32,0,ModulKoneksi,koneksi,21,0,actLogin,Globals,18,0,actLogin,Activity_Create,27,0,actLogin,Activity_Resume,34,0,actLogin,BtnLogin_Click,50,6,ModulKoneksi,Process_Globals,8,0,actLogin,enkripsi,53,0
+NavigationStack=actOpsi,Warga_Click,41,0,Main,SignIn_Click,39,0,actRegister,btnLogin_Click,32,0,actLogin,Activity_Create,27,0,actLogin,Activity_Resume,34,0,actLogin,BtnLogin_Click,50,6,ModulKoneksi,koneksi,11,0,ModulKoneksi,Process_Globals,8,0,actLogin,enkripsi,53,0,actLogin,Globals,21,0
 SelectedBuild=0
 VisibleModules=4,2,6,1,5,3,7

@@ -65,11 +65,11 @@ try {
 if (RapidSub.canDelegate("btnlogin_click")) { return b4a.example.actlogin.remoteMe.runUserSub(false, "actlogin","btnlogin_click");}
  BA.debugLineNum = 50;BA.debugLine="Private Sub BtnLogin_Click";
 Debug.ShouldStop(131072);
- BA.debugLineNum = 76;BA.debugLine="StartActivity(actBeranda)";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 51;BA.debugLine="StartActivity(actBeranda)";
+Debug.ShouldStop(262144);
 actlogin.mostCurrent.__c.runVoidMethod ("StartActivity",actlogin.processBA,(Object)((actlogin.mostCurrent._actberanda.getObject())));
- BA.debugLineNum = 87;BA.debugLine="End Sub";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 52;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -118,18 +118,18 @@ finally {
 		}}
 public static RemoteObject  _enkripsi() throws Exception{
 try {
-		Debug.PushSubsStack("enkripsi (actlogin) ","actlogin",2,actlogin.mostCurrent.activityBA,actlogin.mostCurrent,89);
+		Debug.PushSubsStack("enkripsi (actlogin) ","actlogin",2,actlogin.mostCurrent.activityBA,actlogin.mostCurrent,54);
 if (RapidSub.canDelegate("enkripsi")) { return b4a.example.actlogin.remoteMe.runUserSub(false, "actlogin","enkripsi");}
- BA.debugLineNum = 89;BA.debugLine="Sub enkripsi";
-Debug.ShouldStop(16777216);
- BA.debugLineNum = 90;BA.debugLine="passwordhash = md.GetMessageDigest(p.GetBytes(\"UT";
-Debug.ShouldStop(33554432);
-actlogin._passwordhash = actlogin.mostCurrent._md.runMethod(false,"GetMessageDigest",(Object)(actlogin.mostCurrent._p.runMethod(false,"getBytes",(Object)(RemoteObject.createImmutable("UTF8")))),(Object)(RemoteObject.createImmutable("MD5")));
- BA.debugLineNum = 91;BA.debugLine="epass = ByteCon.HexFromBytes(passwordhash)";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 54;BA.debugLine="Sub enkripsi";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 55;BA.debugLine="passwordhash = MHandler.GetMessageDigest(p.GetByt";
+Debug.ShouldStop(4194304);
+actlogin._passwordhash = actlogin.mostCurrent._mhandler.runMethod(false,"GetMessageDigest",(Object)(actlogin.mostCurrent._p.runMethod(false,"getBytes",(Object)(RemoteObject.createImmutable("UTF8")))),(Object)(RemoteObject.createImmutable("MHandler5")));
+ BA.debugLineNum = 56;BA.debugLine="epass = ByteCon.HexFromBytes(passwordhash)";
+Debug.ShouldStop(8388608);
 actlogin.mostCurrent._epass = actlogin.mostCurrent._bytecon.runMethod(true,"HexFromBytes",(Object)(actlogin._passwordhash));
- BA.debugLineNum = 92;BA.debugLine="End Sub";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 57;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -144,8 +144,8 @@ public static RemoteObject  _globals() throws Exception{
 actlogin.mostCurrent._txtnama = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
  //BA.debugLineNum = 17;BA.debugLine="Private txtpass As EditText";
 actlogin.mostCurrent._txtpass = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
- //BA.debugLineNum = 19;BA.debugLine="Dim md As MessageDigest";
-actlogin.mostCurrent._md = RemoteObject.createNew ("anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper");
+ //BA.debugLineNum = 19;BA.debugLine="Dim MHandler As MessageDigest";
+actlogin.mostCurrent._mhandler = RemoteObject.createNew ("anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper");
  //BA.debugLineNum = 20;BA.debugLine="Dim ByteCon As ByteConverter";
 actlogin.mostCurrent._bytecon = RemoteObject.createNew ("anywheresoftware.b4a.agraham.byteconverter.ByteConverter");
  //BA.debugLineNum = 21;BA.debugLine="Dim passwordhash() As Byte";

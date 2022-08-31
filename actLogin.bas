@@ -22,7 +22,7 @@ Sub Globals
 	Private txtnama As EditText
 	Private txtpass As EditText
 	
-	Dim md As MessageDigest
+	Dim MHandler As MessageDigest
 	Dim ByteCon As ByteConverter
 	Dim passwordhash() As Byte
 	Dim epass As String
@@ -58,6 +58,6 @@ Private Sub BtnLogin_Click
 End Sub
 
 Sub enkripsi
-	passwordhash = md.GetMessageDigest(p.GetBytes("UTF8"),"MD5")
+	passwordhash = MHandler.GetMessageDigest(p.GetBytes("UTF8"),"MHandler5")
 	epass = ByteCon.HexFromBytes(passwordhash)
 End Sub

@@ -347,7 +347,7 @@ public static void initializeProcessGlobals() {
 public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _txtnama = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _txtpass = null;
-public anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper _md = null;
+public anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper _mhandler = null;
 public anywheresoftware.b4a.agraham.byteconverter.ByteConverter _bytecon = null;
 public static byte[] _passwordhash = null;
 public static String _epass = "";
@@ -394,55 +394,55 @@ public static String  _btnlogin_click() throws Exception{
 RDebugUtils.currentModule="actlogin";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "btnlogin_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnlogin_click", null));}
-RDebugUtils.currentLine=1179648;
- //BA.debugLineNum = 1179648;BA.debugLine="Private Sub BtnLogin_Click";
-RDebugUtils.currentLine=1179674;
- //BA.debugLineNum = 1179674;BA.debugLine="StartActivity(actBeranda)";
+RDebugUtils.currentLine=1310720;
+ //BA.debugLineNum = 1310720;BA.debugLine="Private Sub BtnLogin_Click";
+RDebugUtils.currentLine=1310721;
+ //BA.debugLineNum = 1310721;BA.debugLine="StartActivity(actBeranda)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actberanda.getObject()));
-RDebugUtils.currentLine=1179685;
- //BA.debugLineNum = 1179685;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1310722;
+ //BA.debugLineNum = 1310722;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnregis_click() throws Exception{
 RDebugUtils.currentModule="actlogin";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "btnregis_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnregis_click", null));}
-RDebugUtils.currentLine=1310720;
- //BA.debugLineNum = 1310720;BA.debugLine="Sub btnRegis_Click";
-RDebugUtils.currentLine=1310722;
- //BA.debugLineNum = 1310722;BA.debugLine="StartActivity(actRegister)";
+RDebugUtils.currentLine=1179648;
+ //BA.debugLineNum = 1179648;BA.debugLine="Sub btnRegis_Click";
+RDebugUtils.currentLine=1179650;
+ //BA.debugLineNum = 1179650;BA.debugLine="StartActivity(actRegister)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actregister.getObject()));
-RDebugUtils.currentLine=1310723;
- //BA.debugLineNum = 1310723;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1179651;
+ //BA.debugLineNum = 1179651;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnresetsandi_click() throws Exception{
 RDebugUtils.currentModule="actlogin";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "btnresetsandi_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnresetsandi_click", null));}
-RDebugUtils.currentLine=1376256;
- //BA.debugLineNum = 1376256;BA.debugLine="Sub BtnResetSandi_Click";
-RDebugUtils.currentLine=1376258;
- //BA.debugLineNum = 1376258;BA.debugLine="StartActivity(actLupaKataSandi)";
+RDebugUtils.currentLine=1245184;
+ //BA.debugLineNum = 1245184;BA.debugLine="Sub BtnResetSandi_Click";
+RDebugUtils.currentLine=1245186;
+ //BA.debugLineNum = 1245186;BA.debugLine="StartActivity(actLupaKataSandi)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actlupakatasandi.getObject()));
-RDebugUtils.currentLine=1376259;
- //BA.debugLineNum = 1376259;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1245187;
+ //BA.debugLineNum = 1245187;BA.debugLine="End Sub";
 return "";
 }
 public static String  _enkripsi() throws Exception{
 RDebugUtils.currentModule="actlogin";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "enkripsi", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "enkripsi", null));}
-RDebugUtils.currentLine=1245184;
- //BA.debugLineNum = 1245184;BA.debugLine="Sub enkripsi";
-RDebugUtils.currentLine=1245185;
- //BA.debugLineNum = 1245185;BA.debugLine="passwordhash = md.GetMessageDigest(p.GetBytes(\"UT";
-_passwordhash = mostCurrent._md.GetMessageDigest(mostCurrent._p.getBytes("UTF8"),"MD5");
-RDebugUtils.currentLine=1245186;
- //BA.debugLineNum = 1245186;BA.debugLine="epass = ByteCon.HexFromBytes(passwordhash)";
+RDebugUtils.currentLine=1376256;
+ //BA.debugLineNum = 1376256;BA.debugLine="Sub enkripsi";
+RDebugUtils.currentLine=1376257;
+ //BA.debugLineNum = 1376257;BA.debugLine="passwordhash = MHandler.GetMessageDigest(p.GetByt";
+_passwordhash = mostCurrent._mhandler.GetMessageDigest(mostCurrent._p.getBytes("UTF8"),"MHandler5");
+RDebugUtils.currentLine=1376258;
+ //BA.debugLineNum = 1376258;BA.debugLine="epass = ByteCon.HexFromBytes(passwordhash)";
 mostCurrent._epass = mostCurrent._bytecon.HexFromBytes(_passwordhash);
-RDebugUtils.currentLine=1245187;
- //BA.debugLineNum = 1245187;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1376259;
+ //BA.debugLineNum = 1376259;BA.debugLine="End Sub";
 return "";
 }
 }
