@@ -54,42 +54,7 @@ Sub BtnResetSandi_Click
 	StartActivity(actLupaKataSandi)
 End Sub
 Private Sub BtnLogin_Click
-'	'cek input
-'	If txtnama.Text = "" Then
-'		MsgboxAsync("Masukkan Username","Info")
-'		Return
-'	End If
-'	If txtpass.Text = "" Then
-'		MsgboxAsync("Masukkan Password","Info")
-'		Return
-'	End If
-'	
-'	ModulKoneksi.koneksi
-'	
-'	p = txtpass.Text
-'	
-'	enkripsi
-'	
-'	'cek usename
-'	ModulKoneksi.ResultS = ModulKoneksi.MHandler.Query("SELECT * FROM tb_admindesa WHERE username='" & txtnama.Text & "'")
-'	If ModulKoneksi.ResultS.RowCount > 0 Then
-'		'cek password
-'		ModulKoneksi.ResultS = ModulKoneksi.MHandler.Query("SELECT * FROM tb_admindesa WHERE username='" & txtnama.Text & "' and password='" & epass & "'")
-'		If ModulKoneksi.ResultS.RowCount > 0 Then
-'			ModulKoneksi.MHandler.Close
-'			MsgboxAsync("Akun Tersedia","Info Database")
-			'Activity.Finish
-			StartActivity(actBeranda)
-'		Else
-'			MsgboxAsync("Password tidak ditemukan","Info")
-'			txtpass.Text = ""
-'			Return
-'		End If
-'	Else
-'		MsgboxAsync("Username tidak ditemukan","Info")
-'		txtnama.Text = ""
-'		Return
-'	End If
+	StartActivity(actBeranda)
 End Sub
 
 Sub enkripsi

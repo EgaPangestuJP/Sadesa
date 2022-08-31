@@ -66,7 +66,7 @@ actlogin,activity_resume,0,0,32,34
 
 
 
-actlogin,btnlogin_click,0,0,50,87
+actlogin,btnlogin_click,0,1,50,52
 
 
 
@@ -78,7 +78,7 @@ actlogin,btnresetsandi_click,0,0,46,49
 
 
 
-actlogin,enkripsi,0,0,89,92
+actlogin,enkripsi,0,0,54,57
 ,passwordhash,,md,,p,,epass,,bytecon
 ,passwordhash,,epass
 
