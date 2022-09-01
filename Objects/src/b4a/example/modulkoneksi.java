@@ -21,6 +21,7 @@ public b4a.example.actberanda _actberanda = null;
 public b4a.example.actregister _actregister = null;
 public b4a.example.actlupakatasandi _actlupakatasandi = null;
 public b4a.example.starter _starter = null;
+public b4a.example.akunpenduduk _akunpenduduk = null;
 public static String  _koneksi(anywheresoftware.b4a.BA _ba) throws Exception{
 RDebugUtils.currentModule="modulkoneksi";
 if (Debug.shouldDelegate(null, "koneksi", false))
@@ -40,8 +41,13 @@ RDebugUtils.currentLine=1507335;
  //BA.debugLineNum = 1507335;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
  };
+<<<<<<< HEAD
 RDebugUtils.currentLine=1507340;
  //BA.debugLineNum = 1507340;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=1507337;
+ //BA.debugLineNum = 1507337;BA.debugLine="End Sub";
+>>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 return "";
 }
 }

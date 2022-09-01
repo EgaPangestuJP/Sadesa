@@ -1,4 +1,5 @@
 ﻿Build1=Default,b4a.example
+<<<<<<< HEAD
 File1=berandaadmindesa.bal
 File10=LupaKataSandi.bal
 File11=OpsiLogin.bal
@@ -25,6 +26,28 @@ FileGroup6=Layout
 FileGroup7=Image
 FileGroup8=Image
 FileGroup9=Default Group
+=======
+File1=AkunPenduduk.bal
+File10=Register.bal
+File2=berandaadmindesa.bal
+File3=HomeScreen.bal
+File4=icon.png
+File5=Login.bal
+File6=Logo Kab Tasik.png
+File7=Logo Sadesa.jpg
+File8=LupaKataSandi.bal
+File9=OpsiLogin.bal
+FileGroup1=Default Group
+FileGroup10=Layout
+FileGroup2=Layout
+FileGroup3=Layout
+FileGroup4=Default Group
+FileGroup5=Layout
+FileGroup6=Image
+FileGroup7=Image
+FileGroup8=Layout
+FileGroup9=Layout
+>>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 Group=Modul Group
 Library1=byteconverter
 Library2=core
@@ -37,11 +60,18 @@ Module2=actLogin
 Module3=actLupaKataSandi
 Module4=actOpsi
 Module5=actRegister
+<<<<<<< HEAD
 Module6=ModulKoneksi
 Module7=Starter
 NumberOfFiles=13
+=======
+Module6=AkunPenduduk
+Module7=ModulKoneksi
+Module8=Starter
+NumberOfFiles=10
+>>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 NumberOfLibraries=5
-NumberOfModules=7
+NumberOfModules=8
 Version=11.8
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -67,6 +97,7 @@ End Sub
 Sub Globals
 	'These global variables will be redeclared each time the activity is created.
 	'Private SignIn As Button
+	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)

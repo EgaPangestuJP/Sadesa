@@ -54,7 +54,12 @@ public static b4a.example.actberanda _actberanda = null;
 public static b4a.example.actregister _actregister = null;
 public static b4a.example.actlupakatasandi _actlupakatasandi = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.akunpenduduk _akunpenduduk = null;
   public Object[] GetGlobals() {
+<<<<<<< HEAD
 		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"Main",Debug.moduleToString(b4a.example.main.class),"mh",modulkoneksi._mh,"rs",modulkoneksi._rs,"Starter",Debug.moduleToString(b4a.example.starter.class)};
+=======
+		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"actLogin",Debug.moduleToString(b4a.example.actlogin.class),"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"AkunPenduduk",Debug.moduleToString(b4a.example.akunpenduduk.class),"Main",Debug.moduleToString(b4a.example.main.class),"mh",modulkoneksi._mh,"rs",modulkoneksi._rs,"Starter",Debug.moduleToString(b4a.example.starter.class)};
+>>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 }
 }

@@ -47,3 +47,8 @@ End Sub
 Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
+
+Private Sub btnakunwarga_Click
+	Activity.Finish
+	StartActivity(AkunPenduduk)
+End Sub

@@ -35,6 +35,7 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
+<<<<<<< HEAD
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
 		Debug.PushSubsStack("Activity_Pause (actberanda) ","actberanda",4,actberanda.mostCurrent.activityBA,actberanda.mostCurrent,41);
@@ -60,6 +61,22 @@ if (RapidSub.canDelegate("activity_resume")) { return b4a.example.actberanda.rem
 Debug.ShouldStop(16);
  BA.debugLineNum = 39;BA.debugLine="End Sub";
 Debug.ShouldStop(64);
+=======
+public static RemoteObject  _btnakunwarga_click() throws Exception{
+try {
+		Debug.PushSubsStack("btnakunwarga_Click (actberanda) ","actberanda",4,actberanda.mostCurrent.activityBA,actberanda.mostCurrent,31);
+if (RapidSub.canDelegate("btnakunwarga_click")) { return b4a.example.actberanda.remoteMe.runUserSub(false, "actberanda","btnakunwarga_click");}
+ BA.debugLineNum = 31;BA.debugLine="Private Sub btnakunwarga_Click";
+Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 32;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(-2147483648);
+actberanda.mostCurrent._activity.runVoidMethod ("Finish");
+ BA.debugLineNum = 33;BA.debugLine="StartActivity(AkunPenduduk)";
+Debug.ShouldStop(1);
+actberanda.mostCurrent.__c.runVoidMethod ("StartActivity",actberanda.processBA,(Object)((actberanda.mostCurrent._akunpenduduk.getObject())));
+ BA.debugLineNum = 34;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
+>>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

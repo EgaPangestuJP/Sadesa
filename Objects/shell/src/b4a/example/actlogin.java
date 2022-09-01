@@ -69,7 +69,12 @@ public static b4a.example.actberanda _actberanda = null;
 public static b4a.example.actregister _actregister = null;
 public static b4a.example.actlupakatasandi _actlupakatasandi = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.akunpenduduk _akunpenduduk = null;
   public Object[] GetGlobals() {
+<<<<<<< HEAD
 		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"Activity",actlogin.mostCurrent._activity,"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"ByteCon",actlogin.mostCurrent._bytecon,"epass",actlogin.mostCurrent._epass,"Main",Debug.moduleToString(b4a.example.main.class),"md",actlogin.mostCurrent._md,"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"p",actlogin.mostCurrent._p,"passwordhash",actlogin._passwordhash,"Starter",Debug.moduleToString(b4a.example.starter.class),"txtnama",actlogin.mostCurrent._txtnama,"txtpass",actlogin.mostCurrent._txtpass};
+=======
+		return new Object[] {"actBeranda",Debug.moduleToString(b4a.example.actberanda.class),"Activity",actlogin.mostCurrent._activity,"actLupaKataSandi",Debug.moduleToString(b4a.example.actlupakatasandi.class),"actOpsi",Debug.moduleToString(b4a.example.actopsi.class),"actRegister",Debug.moduleToString(b4a.example.actregister.class),"AkunPenduduk",Debug.moduleToString(b4a.example.akunpenduduk.class),"ByteCon",actlogin.mostCurrent._bytecon,"epass",actlogin.mostCurrent._epass,"Main",Debug.moduleToString(b4a.example.main.class),"md",actlogin.mostCurrent._md,"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"p",actlogin.mostCurrent._p,"passwordhash",actlogin._passwordhash,"Starter",Debug.moduleToString(b4a.example.starter.class),"txtnama",actlogin.mostCurrent._txtnama,"txtpass",actlogin.mostCurrent._txtpass};
+>>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 }
 }
