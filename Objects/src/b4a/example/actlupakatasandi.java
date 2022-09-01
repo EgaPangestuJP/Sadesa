@@ -362,8 +362,8 @@ RDebugUtils.currentLine=2424832;
 RDebugUtils.currentLine=2424834;
  //BA.debugLineNum = 2424834;BA.debugLine="Activity.LoadLayout(\"LupaKataSandi\")";
 mostCurrent._activity.LoadLayout("LupaKataSandi",mostCurrent.activityBA);
-RDebugUtils.currentLine=2424836;
- //BA.debugLineNum = 2424836;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2424835;
+ //BA.debugLineNum = 2424835;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{

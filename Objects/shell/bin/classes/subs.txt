@@ -26,19 +26,19 @@ main,signin_click,0,0,39,42
 
 
 
-actopsi,activity_create,1,0,20,24
+actopsi,activity_create,1,0,20,23
 ,admindesa,,warga
 ,admindesa,,warga
 
-actopsi,activity_pause,0,0,30,32
+actopsi,activity_pause,0,0,29,31
 
 
 
-actopsi,activity_resume,0,0,26,28
+actopsi,activity_resume,0,0,25,27
 
 
 
-actopsi,admindesa_click,0,0,35,38
+actopsi,admindesa_click,0,0,34,37
 
 
 
@@ -50,7 +50,7 @@ actopsi,process_globals,0,1,6,10
 
 
 
-actopsi,warga_click,0,0,40,42
+actopsi,warga_click,0,0,39,41
 
 
 
@@ -142,19 +142,19 @@ actregister,process_globals,0,1,6,10
 
 
 
-actlupakatasandi,activity_create,1,0,19,23
+actlupakatasandi,activity_create,1,0,19,22
 ,btnhubadmin
 ,btnhubadmin
 
-actlupakatasandi,activity_pause,0,0,29,31
+actlupakatasandi,activity_pause,0,0,28,30
 
 
 
-actlupakatasandi,activity_resume,0,0,25,27
+actlupakatasandi,activity_resume,0,0,24,26
 
 
 
-actlupakatasandi,btnhubadmin_click,0,0,33,35
+actlupakatasandi,btnhubadmin_click,0,0,32,34
 
 
 

@@ -16,8 +16,8 @@ Debug.ShouldStop(524288);
  BA.debugLineNum = 22;BA.debugLine="Activity.LoadLayout(\"OpsiLogin\")";
 Debug.ShouldStop(2097152);
 actopsi.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("OpsiLogin")),actopsi.mostCurrent.activityBA);
- BA.debugLineNum = 24;BA.debugLine="End Sub";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 23;BA.debugLine="End Sub";
+Debug.ShouldStop(4194304);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -28,13 +28,13 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (actopsi) ","actopsi",1,actopsi.mostCurrent.activityBA,actopsi.mostCurrent,30);
+		Debug.PushSubsStack("Activity_Pause (actopsi) ","actopsi",1,actopsi.mostCurrent.activityBA,actopsi.mostCurrent,29);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.actopsi.remoteMe.runUserSub(false, "actopsi","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 30;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(536870912);
- BA.debugLineNum = 32;BA.debugLine="End Sub";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 29;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 31;BA.debugLine="End Sub";
+Debug.ShouldStop(1073741824);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -45,12 +45,12 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (actopsi) ","actopsi",1,actopsi.mostCurrent.activityBA,actopsi.mostCurrent,26);
+		Debug.PushSubsStack("Activity_Resume (actopsi) ","actopsi",1,actopsi.mostCurrent.activityBA,actopsi.mostCurrent,25);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.actopsi.remoteMe.runUserSub(false, "actopsi","activity_resume");}
- BA.debugLineNum = 26;BA.debugLine="Sub Activity_Resume";
-Debug.ShouldStop(33554432);
- BA.debugLineNum = 28;BA.debugLine="End Sub";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 25;BA.debugLine="Sub Activity_Resume";
+Debug.ShouldStop(16777216);
+ BA.debugLineNum = 27;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -61,15 +61,15 @@ finally {
 		}}
 public static RemoteObject  _admindesa_click() throws Exception{
 try {
-		Debug.PushSubsStack("AdminDesa_Click (actopsi) ","actopsi",1,actopsi.mostCurrent.activityBA,actopsi.mostCurrent,35);
+		Debug.PushSubsStack("AdminDesa_Click (actopsi) ","actopsi",1,actopsi.mostCurrent.activityBA,actopsi.mostCurrent,34);
 if (RapidSub.canDelegate("admindesa_click")) { return b4a.example.actopsi.remoteMe.runUserSub(false, "actopsi","admindesa_click");}
- BA.debugLineNum = 35;BA.debugLine="Private Sub AdminDesa_Click";
-Debug.ShouldStop(4);
- BA.debugLineNum = 37;BA.debugLine="StartActivity(actLogin)";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 34;BA.debugLine="Private Sub AdminDesa_Click";
+Debug.ShouldStop(2);
+ BA.debugLineNum = 36;BA.debugLine="StartActivity(actLogin)";
+Debug.ShouldStop(8);
 actopsi.mostCurrent.__c.runVoidMethod ("StartActivity",actopsi.processBA,(Object)((actopsi.mostCurrent._actlogin.getObject())));
- BA.debugLineNum = 38;BA.debugLine="End Sub";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 37;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -94,12 +94,12 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _warga_click() throws Exception{
 try {
-		Debug.PushSubsStack("Warga_Click (actopsi) ","actopsi",1,actopsi.mostCurrent.activityBA,actopsi.mostCurrent,40);
+		Debug.PushSubsStack("Warga_Click (actopsi) ","actopsi",1,actopsi.mostCurrent.activityBA,actopsi.mostCurrent,39);
 if (RapidSub.canDelegate("warga_click")) { return b4a.example.actopsi.remoteMe.runUserSub(false, "actopsi","warga_click");}
- BA.debugLineNum = 40;BA.debugLine="Private Sub Warga_Click";
-Debug.ShouldStop(128);
- BA.debugLineNum = 42;BA.debugLine="End Sub";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 39;BA.debugLine="Private Sub Warga_Click";
+Debug.ShouldStop(64);
+ BA.debugLineNum = 41;BA.debugLine="End Sub";
+Debug.ShouldStop(256);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

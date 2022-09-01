@@ -16,8 +16,8 @@ Debug.ShouldStop(262144);
  BA.debugLineNum = 21;BA.debugLine="Activity.LoadLayout(\"LupaKataSandi\")";
 Debug.ShouldStop(1048576);
 actlupakatasandi.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("LupaKataSandi")),actlupakatasandi.mostCurrent.activityBA);
- BA.debugLineNum = 23;BA.debugLine="End Sub";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 22;BA.debugLine="End Sub";
+Debug.ShouldStop(2097152);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -28,13 +28,13 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (actlupakatasandi) ","actlupakatasandi",6,actlupakatasandi.mostCurrent.activityBA,actlupakatasandi.mostCurrent,29);
+		Debug.PushSubsStack("Activity_Pause (actlupakatasandi) ","actlupakatasandi",6,actlupakatasandi.mostCurrent.activityBA,actlupakatasandi.mostCurrent,28);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.actlupakatasandi.remoteMe.runUserSub(false, "actlupakatasandi","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 29;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 31;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 28;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(134217728);
+ BA.debugLineNum = 30;BA.debugLine="End Sub";
+Debug.ShouldStop(536870912);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -45,12 +45,12 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (actlupakatasandi) ","actlupakatasandi",6,actlupakatasandi.mostCurrent.activityBA,actlupakatasandi.mostCurrent,25);
+		Debug.PushSubsStack("Activity_Resume (actlupakatasandi) ","actlupakatasandi",6,actlupakatasandi.mostCurrent.activityBA,actlupakatasandi.mostCurrent,24);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.actlupakatasandi.remoteMe.runUserSub(false, "actlupakatasandi","activity_resume");}
- BA.debugLineNum = 25;BA.debugLine="Sub Activity_Resume";
-Debug.ShouldStop(16777216);
- BA.debugLineNum = 27;BA.debugLine="End Sub";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 24;BA.debugLine="Sub Activity_Resume";
+Debug.ShouldStop(8388608);
+ BA.debugLineNum = 26;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -61,12 +61,12 @@ finally {
 		}}
 public static RemoteObject  _btnhubadmin_click() throws Exception{
 try {
-		Debug.PushSubsStack("BtnHubAdmin_Click (actlupakatasandi) ","actlupakatasandi",6,actlupakatasandi.mostCurrent.activityBA,actlupakatasandi.mostCurrent,33);
+		Debug.PushSubsStack("BtnHubAdmin_Click (actlupakatasandi) ","actlupakatasandi",6,actlupakatasandi.mostCurrent.activityBA,actlupakatasandi.mostCurrent,32);
 if (RapidSub.canDelegate("btnhubadmin_click")) { return b4a.example.actlupakatasandi.remoteMe.runUserSub(false, "actlupakatasandi","btnhubadmin_click");}
- BA.debugLineNum = 33;BA.debugLine="Private Sub BtnHubAdmin_Click";
-Debug.ShouldStop(1);
- BA.debugLineNum = 35;BA.debugLine="End Sub";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 32;BA.debugLine="Private Sub BtnHubAdmin_Click";
+Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 34;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

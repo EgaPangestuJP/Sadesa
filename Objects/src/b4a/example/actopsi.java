@@ -363,8 +363,8 @@ RDebugUtils.currentLine=524288;
 RDebugUtils.currentLine=524290;
  //BA.debugLineNum = 524290;BA.debugLine="Activity.LoadLayout(\"OpsiLogin\")";
 mostCurrent._activity.LoadLayout("OpsiLogin",mostCurrent.activityBA);
-RDebugUtils.currentLine=524292;
- //BA.debugLineNum = 524292;BA.debugLine="End Sub";
+RDebugUtils.currentLine=524291;
+ //BA.debugLineNum = 524291;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
