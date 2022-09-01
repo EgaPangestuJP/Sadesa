@@ -10,10 +10,6 @@ Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
 	
-<<<<<<< HEAD
-	
-=======
->>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 	Dim mh As MysqlHandler
 	Dim rs As ResultSet
 End Sub
@@ -26,11 +22,9 @@ Sub koneksi
 	If mh.isConnected = False Then
 		MsgboxAsync("Koneksi Terputus","Info")
 		ExitApplication
-<<<<<<< HEAD
+
 '	Else If MHandler.isConnected = True Then
 '		MsgboxAsync("Koneksi Tersambung","Info")
 '		ExitApplication
-=======
->>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 	End If
 End Sub

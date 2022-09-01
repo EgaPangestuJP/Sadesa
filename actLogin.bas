@@ -21,11 +21,7 @@ Sub Globals
 
 	Private txtnama As EditText
 	Private txtpass As EditText
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 5204d7a0311585b33749d5e518350530ee61520a
 	Dim md As MessageDigest
 	Dim ByteCon As ByteConverter
 	Dim passwordhash() As Byte
