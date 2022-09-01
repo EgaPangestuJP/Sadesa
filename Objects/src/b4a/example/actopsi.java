@@ -34,7 +34,7 @@ public class actopsi extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.actopsi");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.actopsi");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class actopsi extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _admindesa = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _warga = null;
@@ -354,59 +345,55 @@ public b4a.example.actberanda _actberanda = null;
 public b4a.example.actregister _actregister = null;
 public b4a.example.actlupakatasandi _actlupakatasandi = null;
 public b4a.example.starter _starter = null;
-public b4a.example.akunpenduduk _akunpenduduk = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="actopsi";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=524288;
- //BA.debugLineNum = 524288;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=524290;
- //BA.debugLineNum = 524290;BA.debugLine="Activity.LoadLayout(\"OpsiLogin\")";
+ //BA.debugLineNum = 20;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 22;BA.debugLine="Activity.LoadLayout(\"OpsiLogin\")";
 mostCurrent._activity.LoadLayout("OpsiLogin",mostCurrent.activityBA);
-RDebugUtils.currentLine=524292;
- //BA.debugLineNum = 524292;BA.debugLine="End Sub";
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="actopsi";
-RDebugUtils.currentLine=655360;
- //BA.debugLineNum = 655360;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=655362;
- //BA.debugLineNum = 655362;BA.debugLine="End Sub";
+ //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="actopsi";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=589824;
- //BA.debugLineNum = 589824;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=589826;
- //BA.debugLineNum = 589826;BA.debugLine="End Sub";
+ //BA.debugLineNum = 26;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 28;BA.debugLine="End Sub";
 return "";
 }
 public static String  _admindesa_click() throws Exception{
-RDebugUtils.currentModule="actopsi";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "admindesa_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "admindesa_click", null));}
-RDebugUtils.currentLine=720896;
- //BA.debugLineNum = 720896;BA.debugLine="Private Sub AdminDesa_Click";
-RDebugUtils.currentLine=720898;
- //BA.debugLineNum = 720898;BA.debugLine="StartActivity(actLogin)";
+ //BA.debugLineNum = 35;BA.debugLine="Private Sub AdminDesa_Click";
+ //BA.debugLineNum = 37;BA.debugLine="StartActivity(actLogin)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actlogin.getObject()));
-RDebugUtils.currentLine=720899;
- //BA.debugLineNum = 720899;BA.debugLine="End Sub";
+ //BA.debugLineNum = 38;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 16;BA.debugLine="Private AdminDesa As Button";
+mostCurrent._admindesa = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 17;BA.debugLine="Private Warga As Button";
+mostCurrent._warga = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 18;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 public static String  _warga_click() throws Exception{
-RDebugUtils.currentModule="actopsi";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "warga_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "warga_click", null));}
-RDebugUtils.currentLine=786432;
- //BA.debugLineNum = 786432;BA.debugLine="Private Sub Warga_Click";
-RDebugUtils.currentLine=786434;
- //BA.debugLineNum = 786434;BA.debugLine="End Sub";
+ //BA.debugLineNum = 40;BA.debugLine="Private Sub Warga_Click";
+ //BA.debugLineNum = 42;BA.debugLine="End Sub";
 return "";
 }
 }

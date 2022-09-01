@@ -34,7 +34,7 @@ public class main extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,125 +335,6 @@ public class main extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}
-public static boolean isAnyActivityVisible() {
-    boolean vis = false;
-vis = vis | (main.mostCurrent != null);
-vis = vis | (actopsi.mostCurrent != null);
-vis = vis | (actlogin.mostCurrent != null);
-vis = vis | (actberanda.mostCurrent != null);
-vis = vis | (actregister.mostCurrent != null);
-vis = vis | (actlupakatasandi.mostCurrent != null);
-vis = vis | (akunpenduduk.mostCurrent != null);
-return vis;}
-
-private static BA killProgramHelper(BA ba) {
-    if (ba == null)
-        return null;
-    anywheresoftware.b4a.BA.SharedProcessBA sharedProcessBA = ba.sharedProcessBA;
-    if (sharedProcessBA == null || sharedProcessBA.activityBA == null)
-        return null;
-    return sharedProcessBA.activityBA.get();
-}
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(main.mostCurrent == null ? null : main.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (actopsi.previousOne != null) {
-				__a = actopsi.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(actopsi.mostCurrent == null ? null : actopsi.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (actlogin.previousOne != null) {
-				__a = actlogin.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(actlogin.mostCurrent == null ? null : actlogin.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (actberanda.previousOne != null) {
-				__a = actberanda.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(actberanda.mostCurrent == null ? null : actberanda.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (actregister.previousOne != null) {
-				__a = actregister.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(actregister.mostCurrent == null ? null : actregister.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (actlupakatasandi.previousOne != null) {
-				__a = actlupakatasandi.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(actlupakatasandi.mostCurrent == null ? null : actlupakatasandi.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
- {
-            Activity __a = null;
-            if (akunpenduduk.previousOne != null) {
-				__a = akunpenduduk.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(akunpenduduk.mostCurrent == null ? null : akunpenduduk.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public b4a.example.actopsi _actopsi = null;
@@ -463,49 +344,69 @@ public b4a.example.actberanda _actberanda = null;
 public b4a.example.actregister _actregister = null;
 public b4a.example.actlupakatasandi _actlupakatasandi = null;
 public b4a.example.starter _starter = null;
-public b4a.example.akunpenduduk _akunpenduduk = null;
+
+public static boolean isAnyActivityVisible() {
+    boolean vis = false;
+vis = vis | (main.mostCurrent != null);
+vis = vis | (actopsi.mostCurrent != null);
+vis = vis | (actlogin.mostCurrent != null);
+vis = vis | (actberanda.mostCurrent != null);
+vis = vis | (actregister.mostCurrent != null);
+vis = vis | (actlupakatasandi.mostCurrent != null);
+return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131073;
- //BA.debugLineNum = 131073;BA.debugLine="Activity.LoadLayout(\"HomeScreen\")";
+ //BA.debugLineNum = 27;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 28;BA.debugLine="Activity.LoadLayout(\"HomeScreen\")";
 mostCurrent._activity.LoadLayout("HomeScreen",mostCurrent.activityBA);
-RDebugUtils.currentLine=131075;
- //BA.debugLineNum = 131075;BA.debugLine="End Sub";
+ //BA.debugLineNum = 30;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="main";
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="End Sub";
+ //BA.debugLineNum = 36;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 38;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+ //BA.debugLineNum = 32;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 34;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 21;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 25;BA.debugLine="End Sub";
+return "";
+}
+
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        main._process_globals();
+actopsi._process_globals();
+actlogin._process_globals();
+modulkoneksi._process_globals();
+actberanda._process_globals();
+actregister._process_globals();
+actlupakatasandi._process_globals();
+starter._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 15;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 18;BA.debugLine="Private xui As XUI";
+_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }
 public static String  _signin_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "signin_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "signin_click", null));}
-RDebugUtils.currentLine=327680;
- //BA.debugLineNum = 327680;BA.debugLine="Private Sub SignIn_Click";
-RDebugUtils.currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="StartActivity(actOpsi)";
+ //BA.debugLineNum = 40;BA.debugLine="Private Sub SignIn_Click";
+ //BA.debugLineNum = 42;BA.debugLine="StartActivity(actOpsi)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._actopsi.getObject()));
-RDebugUtils.currentLine=327683;
- //BA.debugLineNum = 327683;BA.debugLine="End Sub";
+ //BA.debugLineNum = 43;BA.debugLine="End Sub";
 return "";
 }
 }

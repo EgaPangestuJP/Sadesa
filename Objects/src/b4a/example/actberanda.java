@@ -34,7 +34,7 @@ public class actberanda extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.actberanda");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.actberanda");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class actberanda extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.ListViewWrapper _lv = null;
 public b4a.example.main _main = null;
@@ -353,96 +344,76 @@ public b4a.example.modulkoneksi _modulkoneksi = null;
 public b4a.example.actregister _actregister = null;
 public b4a.example.actlupakatasandi _actlupakatasandi = null;
 public b4a.example.starter _starter = null;
-public b4a.example.akunpenduduk _akunpenduduk = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="actberanda";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=1703936;
- //BA.debugLineNum = 1703936;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=1703938;
- //BA.debugLineNum = 1703938;BA.debugLine="Activity.LoadLayout(\"berandaadmindesa\")";
+ //BA.debugLineNum = 18;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 20;BA.debugLine="Activity.LoadLayout(\"berandaadmindesa\")";
 mostCurrent._activity.LoadLayout("berandaadmindesa",mostCurrent.activityBA);
-RDebugUtils.currentLine=1703939;
- //BA.debugLineNum = 1703939;BA.debugLine="ShowList";
+ //BA.debugLineNum = 21;BA.debugLine="ShowList";
 _showlist();
-RDebugUtils.currentLine=1703940;
- //BA.debugLineNum = 1703940;BA.debugLine="lv.SingleLineLayout.Label.TextColor = Colors.Blac";
+ //BA.debugLineNum = 22;BA.debugLine="lv.SingleLineLayout.Label.TextColor = Colors.Blac";
 mostCurrent._lv.getSingleLineLayout().Label.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=1703941;
- //BA.debugLineNum = 1703941;BA.debugLine="lv.SingleLineLayout.Label.TextSize = 15";
+ //BA.debugLineNum = 23;BA.debugLine="lv.SingleLineLayout.Label.TextSize = 15";
 mostCurrent._lv.getSingleLineLayout().Label.setTextSize((float) (15));
-RDebugUtils.currentLine=1703943;
- //BA.debugLineNum = 1703943;BA.debugLine="End Sub";
+ //BA.debugLineNum = 25;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_pause(boolean _userclosed) throws Exception{
+ //BA.debugLineNum = 41;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 43;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_resume() throws Exception{
+ //BA.debugLineNum = 37;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 39;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btnakunwarga_click() throws Exception{
+ //BA.debugLineNum = 45;BA.debugLine="Private Sub btnakunwarga_Click";
+ //BA.debugLineNum = 48;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 15;BA.debugLine="Private lv As ListView";
+mostCurrent._lv = new anywheresoftware.b4a.objects.ListViewWrapper();
+ //BA.debugLineNum = 16;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 public static String  _showlist() throws Exception{
-RDebugUtils.currentModule="actberanda";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "showlist", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showlist", null));}
 int _i = 0;
-RDebugUtils.currentLine=3670016;
- //BA.debugLineNum = 3670016;BA.debugLine="Sub ShowList";
-RDebugUtils.currentLine=3670017;
- //BA.debugLineNum = 3670017;BA.debugLine="ModulKoneksi.koneksi";
+ //BA.debugLineNum = 27;BA.debugLine="Sub ShowList";
+ //BA.debugLineNum = 28;BA.debugLine="ModulKoneksi.koneksi";
 mostCurrent._modulkoneksi._koneksi /*String*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=3670018;
- //BA.debugLineNum = 3670018;BA.debugLine="lv.Clear";
+ //BA.debugLineNum = 29;BA.debugLine="lv.Clear";
 mostCurrent._lv.Clear();
-RDebugUtils.currentLine=3670019;
- //BA.debugLineNum = 3670019;BA.debugLine="ModulKoneksi.rs = ModulKoneksi.mh.Query(\"SELECT *";
+ //BA.debugLineNum = 30;BA.debugLine="ModulKoneksi.rs = ModulKoneksi.mh.Query(\"SELECT *";
 mostCurrent._modulkoneksi._rs /*mysql.mysqlhandler.ResultSetWrapper*/  = (mysql.mysqlhandler.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new mysql.mysqlhandler.ResultSetWrapper(), (java.sql.ResultSet)(mostCurrent._modulkoneksi._mh /*mysql.mysqlhandler*/ .Query("SELECT * FROM tb_desa ORDER BY id_desa ASC")));
-RDebugUtils.currentLine=3670020;
- //BA.debugLineNum = 3670020;BA.debugLine="For i = 0 To ModulKoneksi.rs.RowCount - 1";
+ //BA.debugLineNum = 31;BA.debugLine="For i = 0 To ModulKoneksi.rs.RowCount - 1";
 {
 final int step4 = 1;
 final int limit4 = (int) (mostCurrent._modulkoneksi._rs /*mysql.mysqlhandler.ResultSetWrapper*/ .RowCount()-1);
 _i = (int) (0) ;
 for (;_i <= limit4 ;_i = _i + step4 ) {
-RDebugUtils.currentLine=3670021;
- //BA.debugLineNum = 3670021;BA.debugLine="lv.AddSingleLine(ModulKoneksi.rs.GetString2(\"nam";
+ //BA.debugLineNum = 32;BA.debugLine="lv.AddSingleLine(ModulKoneksi.rs.GetString2(\"nam";
 mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence(mostCurrent._modulkoneksi._rs /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("nama_desa")));
  }
 };
-RDebugUtils.currentLine=3670023;
- //BA.debugLineNum = 3670023;BA.debugLine="ModulKoneksi.mh.Close";
+ //BA.debugLineNum = 34;BA.debugLine="ModulKoneksi.mh.Close";
 mostCurrent._modulkoneksi._mh /*mysql.mysqlhandler*/ .Close();
-RDebugUtils.currentLine=3670024;
- //BA.debugLineNum = 3670024;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="actberanda";
-RDebugUtils.currentLine=1835008;
- //BA.debugLineNum = 1835008;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=1835010;
- //BA.debugLineNum = 1835010;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="actberanda";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=1769472;
- //BA.debugLineNum = 1769472;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=1769474;
- //BA.debugLineNum = 1769474;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btnakunwarga_click() throws Exception{
-RDebugUtils.currentModule="actberanda";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btnakunwarga_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnakunwarga_click", null));}
-RDebugUtils.currentLine=3866624;
- //BA.debugLineNum = 3866624;BA.debugLine="Private Sub btnakunwarga_Click";
-RDebugUtils.currentLine=3866625;
- //BA.debugLineNum = 3866625;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
-RDebugUtils.currentLine=3866626;
- //BA.debugLineNum = 3866626;BA.debugLine="StartActivity(AkunPenduduk)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._akunpenduduk.getObject()));
-RDebugUtils.currentLine=3866627;
- //BA.debugLineNum = 3866627;BA.debugLine="End Sub";
+ //BA.debugLineNum = 35;BA.debugLine="End Sub";
 return "";
 }
 }

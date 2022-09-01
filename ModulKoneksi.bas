@@ -22,9 +22,5 @@ Sub koneksi
 	If mh.isConnected = False Then
 		MsgboxAsync("Koneksi Terputus","Info")
 		ExitApplication
-
-'	Else If MHandler.isConnected = True Then
-'		MsgboxAsync("Koneksi Tersambung","Info")
-'		ExitApplication
 	End If
 End Sub

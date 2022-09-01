@@ -34,7 +34,7 @@ public class actlupakatasandi extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.actlupakatasandi");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.actlupakatasandi");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class actlupakatasandi extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btnhubadmin = null;
 public b4a.example.main _main = null;
@@ -353,46 +344,46 @@ public b4a.example.modulkoneksi _modulkoneksi = null;
 public b4a.example.actberanda _actberanda = null;
 public b4a.example.actregister _actregister = null;
 public b4a.example.starter _starter = null;
-public b4a.example.akunpenduduk _akunpenduduk = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="actlupakatasandi";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=2424832;
- //BA.debugLineNum = 2424832;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=2424834;
- //BA.debugLineNum = 2424834;BA.debugLine="Activity.LoadLayout(\"LupaKataSandi\")";
+ //BA.debugLineNum = 19;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 21;BA.debugLine="Activity.LoadLayout(\"LupaKataSandi\")";
 mostCurrent._activity.LoadLayout("LupaKataSandi",mostCurrent.activityBA);
-RDebugUtils.currentLine=2424836;
- //BA.debugLineNum = 2424836;BA.debugLine="End Sub";
+ //BA.debugLineNum = 23;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="actlupakatasandi";
-RDebugUtils.currentLine=2555904;
- //BA.debugLineNum = 2555904;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=2555906;
- //BA.debugLineNum = 2555906;BA.debugLine="End Sub";
+ //BA.debugLineNum = 29;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 31;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="actlupakatasandi";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=2490368;
- //BA.debugLineNum = 2490368;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=2490370;
- //BA.debugLineNum = 2490370;BA.debugLine="End Sub";
+ //BA.debugLineNum = 25;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 27;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnhubadmin_click() throws Exception{
-RDebugUtils.currentModule="actlupakatasandi";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btnhubadmin_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btnhubadmin_click", null));}
-RDebugUtils.currentLine=2621440;
- //BA.debugLineNum = 2621440;BA.debugLine="Private Sub BtnHubAdmin_Click";
-RDebugUtils.currentLine=2621442;
- //BA.debugLineNum = 2621442;BA.debugLine="End Sub";
+ //BA.debugLineNum = 33;BA.debugLine="Private Sub BtnHubAdmin_Click";
+ //BA.debugLineNum = 35;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 16;BA.debugLine="Private BtnHubAdmin As Button";
+mostCurrent._btnhubadmin = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 17;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 }
