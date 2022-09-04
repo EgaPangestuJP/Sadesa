@@ -65,11 +65,80 @@ try {
 if (RapidSub.canDelegate("btnlogin_click")) { return b4a.example.actlogin.remoteMe.runUserSub(false, "actlogin","btnlogin_click");}
  BA.debugLineNum = 50;BA.debugLine="Private Sub BtnLogin_Click";
 Debug.ShouldStop(131072);
- BA.debugLineNum = 51;BA.debugLine="StartActivity(actBeranda)";
-Debug.ShouldStop(262144);
-actlogin.mostCurrent.__c.runVoidMethod ("StartActivity",actlogin.processBA,(Object)((actlogin.mostCurrent._actberanda.getObject())));
- BA.debugLineNum = 52;BA.debugLine="End Sub";
+ BA.debugLineNum = 52;BA.debugLine="If txtnama.Text = \"\" Then";
 Debug.ShouldStop(524288);
+if (RemoteObject.solveBoolean("=",actlogin.mostCurrent._txtnama.runMethod(true,"getText"),BA.ObjectToString(""))) { 
+ BA.debugLineNum = 53;BA.debugLine="MsgboxAsync(\"Masukkan Username\",\"Info\")";
+Debug.ShouldStop(1048576);
+actlogin.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Masukkan Username")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Info"))),actlogin.processBA);
+ BA.debugLineNum = 54;BA.debugLine="Return";
+Debug.ShouldStop(2097152);
+if (true) return RemoteObject.createImmutable("");
+ };
+ BA.debugLineNum = 56;BA.debugLine="If txtpass.Text = \"\" Then";
+Debug.ShouldStop(8388608);
+if (RemoteObject.solveBoolean("=",actlogin.mostCurrent._txtpass.runMethod(true,"getText"),BA.ObjectToString(""))) { 
+ BA.debugLineNum = 57;BA.debugLine="MsgboxAsync(\"Masukkan Password\",\"Info\")";
+Debug.ShouldStop(16777216);
+actlogin.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Masukkan Password")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Info"))),actlogin.processBA);
+ BA.debugLineNum = 58;BA.debugLine="Return";
+Debug.ShouldStop(33554432);
+if (true) return RemoteObject.createImmutable("");
+ };
+ BA.debugLineNum = 61;BA.debugLine="ModulKoneksi.koneksi";
+Debug.ShouldStop(268435456);
+actlogin.mostCurrent._modulkoneksi.runVoidMethod ("_koneksi" /*RemoteObject*/ ,actlogin.mostCurrent.activityBA);
+ BA.debugLineNum = 63;BA.debugLine="p = txtpass.Text";
+Debug.ShouldStop(1073741824);
+actlogin.mostCurrent._p = actlogin.mostCurrent._txtpass.runMethod(true,"getText");
+ BA.debugLineNum = 65;BA.debugLine="enkripsi";
+Debug.ShouldStop(1);
+_enkripsi();
+ BA.debugLineNum = 68;BA.debugLine="ModulKoneksi.rs = ModulKoneksi.mh.Query(\"SELECT *";
+Debug.ShouldStop(8);
+actlogin.mostCurrent._modulkoneksi._rs /*RemoteObject*/  = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("mysql.mysqlhandler.ResultSetWrapper"), actlogin.mostCurrent._modulkoneksi._mh /*RemoteObject*/ .runMethod(false,"Query",(Object)(RemoteObject.concat(RemoteObject.createImmutable("SELECT * FROM tb_admindesa WHERE username='"),actlogin.mostCurrent._txtnama.runMethod(true,"getText"),RemoteObject.createImmutable("'")))));
+ BA.debugLineNum = 69;BA.debugLine="If ModulKoneksi.rs.RowCount > 0 Then";
+Debug.ShouldStop(16);
+if (RemoteObject.solveBoolean(">",actlogin.mostCurrent._modulkoneksi._rs /*RemoteObject*/ .runMethod(true,"RowCount"),BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 71;BA.debugLine="ModulKoneksi.rs = ModulKoneksi.mh.Query(\"SELECT";
+Debug.ShouldStop(64);
+actlogin.mostCurrent._modulkoneksi._rs /*RemoteObject*/  = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("mysql.mysqlhandler.ResultSetWrapper"), actlogin.mostCurrent._modulkoneksi._mh /*RemoteObject*/ .runMethod(false,"Query",(Object)(RemoteObject.concat(RemoteObject.createImmutable("SELECT * FROM tb_admindesa WHERE username='"),actlogin.mostCurrent._txtnama.runMethod(true,"getText"),RemoteObject.createImmutable("' and password='"),actlogin.mostCurrent._epass,RemoteObject.createImmutable("'")))));
+ BA.debugLineNum = 72;BA.debugLine="If ModulKoneksi.rs.RowCount > 0 Then";
+Debug.ShouldStop(128);
+if (RemoteObject.solveBoolean(">",actlogin.mostCurrent._modulkoneksi._rs /*RemoteObject*/ .runMethod(true,"RowCount"),BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 74;BA.debugLine="ModulKoneksi.mh.Close";
+Debug.ShouldStop(512);
+actlogin.mostCurrent._modulkoneksi._mh /*RemoteObject*/ .runVoidMethod ("Close");
+ BA.debugLineNum = 76;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(2048);
+actlogin.mostCurrent._activity.runVoidMethod ("Finish");
+ BA.debugLineNum = 77;BA.debugLine="StartActivity(AkunPenduduk)";
+Debug.ShouldStop(4096);
+actlogin.mostCurrent.__c.runVoidMethod ("StartActivity",actlogin.processBA,(Object)((actlogin.mostCurrent._akunpenduduk.getObject())));
+ }else {
+ BA.debugLineNum = 79;BA.debugLine="MsgboxAsync(\"Password tidak ditemukan\",\"Info\")";
+Debug.ShouldStop(16384);
+actlogin.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Password tidak ditemukan")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Info"))),actlogin.processBA);
+ BA.debugLineNum = 80;BA.debugLine="txtpass.Text = \"\"";
+Debug.ShouldStop(32768);
+actlogin.mostCurrent._txtpass.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
+ BA.debugLineNum = 81;BA.debugLine="Return";
+Debug.ShouldStop(65536);
+if (true) return RemoteObject.createImmutable("");
+ };
+ }else {
+ BA.debugLineNum = 84;BA.debugLine="MsgboxAsync(\"Username tidak ditemukan\",\"Info\")";
+Debug.ShouldStop(524288);
+actlogin.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Username tidak ditemukan")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Info"))),actlogin.processBA);
+ BA.debugLineNum = 85;BA.debugLine="txtnama.Text = \"\"";
+Debug.ShouldStop(1048576);
+actlogin.mostCurrent._txtnama.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
+ BA.debugLineNum = 86;BA.debugLine="Return";
+Debug.ShouldStop(2097152);
+if (true) return RemoteObject.createImmutable("");
+ };
+ BA.debugLineNum = 88;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -118,18 +187,18 @@ finally {
 		}}
 public static RemoteObject  _enkripsi() throws Exception{
 try {
-		Debug.PushSubsStack("enkripsi (actlogin) ","actlogin",2,actlogin.mostCurrent.activityBA,actlogin.mostCurrent,54);
+		Debug.PushSubsStack("enkripsi (actlogin) ","actlogin",2,actlogin.mostCurrent.activityBA,actlogin.mostCurrent,90);
 if (RapidSub.canDelegate("enkripsi")) { return b4a.example.actlogin.remoteMe.runUserSub(false, "actlogin","enkripsi");}
- BA.debugLineNum = 54;BA.debugLine="Sub enkripsi";
-Debug.ShouldStop(2097152);
- BA.debugLineNum = 55;BA.debugLine="passwordhash = MHandler.GetMessageDigest(p.GetByt";
-Debug.ShouldStop(4194304);
-actlogin._passwordhash = actlogin.mostCurrent._mhandler.runMethod(false,"GetMessageDigest",(Object)(actlogin.mostCurrent._p.runMethod(false,"getBytes",(Object)(RemoteObject.createImmutable("UTF8")))),(Object)(RemoteObject.createImmutable("MHandler5")));
- BA.debugLineNum = 56;BA.debugLine="epass = ByteCon.HexFromBytes(passwordhash)";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 90;BA.debugLine="Sub enkripsi";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 91;BA.debugLine="passwordhash = md.GetMessageDigest(p.GetBytes(\"UT";
+Debug.ShouldStop(67108864);
+actlogin._passwordhash = actlogin.mostCurrent._md.runMethod(false,"GetMessageDigest",(Object)(actlogin.mostCurrent._p.runMethod(false,"getBytes",(Object)(RemoteObject.createImmutable("UTF8")))),(Object)(RemoteObject.createImmutable("MD5")));
+ BA.debugLineNum = 92;BA.debugLine="epass = ByteCon.HexFromBytes(passwordhash)";
+Debug.ShouldStop(134217728);
 actlogin.mostCurrent._epass = actlogin.mostCurrent._bytecon.runMethod(true,"HexFromBytes",(Object)(actlogin._passwordhash));
- BA.debugLineNum = 57;BA.debugLine="End Sub";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 93;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -144,8 +213,8 @@ public static RemoteObject  _globals() throws Exception{
 actlogin.mostCurrent._txtnama = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
  //BA.debugLineNum = 17;BA.debugLine="Private txtpass As EditText";
 actlogin.mostCurrent._txtpass = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
- //BA.debugLineNum = 19;BA.debugLine="Dim MHandler As MessageDigest";
-actlogin.mostCurrent._mhandler = RemoteObject.createNew ("anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper");
+ //BA.debugLineNum = 19;BA.debugLine="Dim md As MessageDigest";
+actlogin.mostCurrent._md = RemoteObject.createNew ("anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper");
  //BA.debugLineNum = 20;BA.debugLine="Dim ByteCon As ByteConverter";
 actlogin.mostCurrent._bytecon = RemoteObject.createNew ("anywheresoftware.b4a.agraham.byteconverter.ByteConverter");
  //BA.debugLineNum = 21;BA.debugLine="Dim passwordhash() As Byte";

@@ -78,6 +78,7 @@ actberanda_subs_0._process_globals();
 actregister_subs_0._process_globals();
 actlupakatasandi_subs_0._process_globals();
 starter_subs_0._process_globals();
+akunpenduduk_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
 actopsi.myClass = BA.getDeviceClass ("b4a.example.actopsi");
 actlogin.myClass = BA.getDeviceClass ("b4a.example.actlogin");
@@ -86,6 +87,7 @@ actberanda.myClass = BA.getDeviceClass ("b4a.example.actberanda");
 actregister.myClass = BA.getDeviceClass ("b4a.example.actregister");
 actlupakatasandi.myClass = BA.getDeviceClass ("b4a.example.actlupakatasandi");
 starter.myClass = BA.getDeviceClass ("b4a.example.starter");
+akunpenduduk.myClass = BA.getDeviceClass ("b4a.example.akunpenduduk");
 		
         } catch (Exception e) {
 			throw new RuntimeException(e);

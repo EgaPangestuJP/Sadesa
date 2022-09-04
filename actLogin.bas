@@ -22,7 +22,7 @@ Sub Globals
 	Private txtnama As EditText
 	Private txtpass As EditText
 	
-	Dim MHandler As MessageDigest
+	Dim md As MessageDigest
 	Dim ByteCon As ByteConverter
 	Dim passwordhash() As Byte
 	Dim epass As String
@@ -54,10 +54,46 @@ Sub BtnResetSandi_Click
 	StartActivity(actLupaKataSandi)
 End Sub
 Private Sub BtnLogin_Click
-	StartActivity(actBeranda)
+	'cek input
+	If txtnama.Text = "" Then
+		MsgboxAsync("Masukkan Username","Info")
+		Return
+	End If
+	If txtpass.Text = "" Then
+		MsgboxAsync("Masukkan Password","Info")
+		Return
+	End If
+	
+	ModulKoneksi.koneksi
+	
+	p = txtpass.Text
+	
+	enkripsi
+	
+	'cek usename
+	ModulKoneksi.rs = ModulKoneksi.mh.Query("SELECT * FROM tb_admindesa WHERE username='" & txtnama.Text & "'")
+	If ModulKoneksi.rs.RowCount > 0 Then
+		'cek password
+		ModulKoneksi.rs = ModulKoneksi.mh.Query("SELECT * FROM tb_admindesa WHERE username='" & txtnama.Text & "' and password='" & epass & "'")
+		If ModulKoneksi.rs.RowCount > 0 Then
+			
+			ModulKoneksi.mh.Close
+			
+			Activity.Finish
+			StartActivity(AkunPenduduk)
+		Else
+			MsgboxAsync("Password tidak ditemukan","Info")
+			txtpass.Text = ""
+			Return
+		End If
+	Else
+		MsgboxAsync("Username tidak ditemukan","Info")
+		txtnama.Text = ""
+		Return
+	End If
 End Sub
 
 Sub enkripsi
-	passwordhash = MHandler.GetMessageDigest(p.GetBytes("UTF8"),"MHandler5")
+	passwordhash = md.GetMessageDigest(p.GetBytes("UTF8"),"MD5")
 	epass = ByteCon.HexFromBytes(passwordhash)
 End Sub
